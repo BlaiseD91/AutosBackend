@@ -1,4 +1,4 @@
-namespace AutosBackend
+namespace AutosBackend.Models
 {
     public class Jarmu
     {
