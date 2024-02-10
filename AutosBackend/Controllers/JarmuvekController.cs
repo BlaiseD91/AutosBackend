@@ -14,10 +14,18 @@ namespace AutosBackend.Controllers
     public class JarmuvekController : ControllerBase
     {
         private readonly Jarmuvek _context;
+        Random vszg = new Random();
 
         public JarmuvekController(Jarmuvek context)
         {
             _context = context;
+            Jarmu j = new Jarmu();
+            j.Id = vszg.Next(1, 99);
+            j.Rendszam = "JAB-001";
+            j.Marka = "Opel";
+            j.Ar = 1200000;
+            _context.Add(j);
+            _context.SaveChanges();
         }
 
         // GET: api/Jarmuvek
